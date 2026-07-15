@@ -64,7 +64,7 @@ def schindler_request(method, path, **kwargs):
         response = requests.request(
             method, url,
             cert=(cert_path, key_path) if cert_path and key_path else None,
-            verify=ca_path if ca_path else True,
+            verify=False,
             timeout=15,
             **kwargs
         )
